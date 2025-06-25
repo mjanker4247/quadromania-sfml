@@ -17,7 +17,8 @@ The template starts out very basic, but might receive additional features over t
 5. If you want to add or remove any .cpp files, change the source files listed in the `add_executable` call in CMakeLists.txt to match the source files your project requires. If you plan on keeping the default main.cpp file then no changes are required.
 6. If your code uses the Audio or Network modules then add `SFML::Audio` or `SFML::Network` to the `target_link_libraries` call alongside the existing `SFML::Graphics` library that is being linked.
 7. If you use Linux, install SFML's dependencies using your system package manager. On Ubuntu and other Debian-based distributions you can use the following commands:
-   ```
+
+   ```bash
    sudo apt update
    sudo apt install \
        libxrandr-dev \
@@ -31,6 +32,7 @@ The template starts out very basic, but might receive additional features over t
        libegl1-mesa-dev \
        libfreetype-dev
    ```
+
 8. Configure and build your project. Most popular IDEs support CMake projects with very little effort on your part.
 
    - [VS Code](https://code.visualstudio.com) via the [CMake extension](https://code.visualstudio.com/docs/cpp/cmake-linux)
@@ -41,7 +43,7 @@ The template starts out very basic, but might receive additional features over t
    Using CMake from the command line is straightforward as well.
    Be sure to run these commands in the root directory of the project you just created.
 
-   ```
+   ```bash
    cmake -B build
    cmake --build build
    ```
@@ -57,7 +59,7 @@ Beyond the convenience of not having to install SFML yourself, this ensures ABI 
 Modifying what version of SFML you want is as easy as changing the `GIT_TAG` argument.
 Currently it uses SFML 3 via the `3.0.0` tag.
 
-## But I want to...
+## But I want to
 
 Modify CMake options by adding them as configuration parameters (with a `-D` flag) or by modifying the contents of CMakeCache.txt and rebuilding.
 
